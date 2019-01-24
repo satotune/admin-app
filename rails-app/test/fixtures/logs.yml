@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_name: MyString
+  user_number: MyString
+  check_time: 2018-11-18 10:30:07
+  result: false
+
+two:
+  user_name: MyString
+  user_number: MyString
+  check_time: 2018-11-18 10:30:07
+  result: false

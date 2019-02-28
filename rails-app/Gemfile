@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
-# user install gem
+# user install gems
 gem 'devise'
 gem 'cancancan'
 gem 'rails_admin'

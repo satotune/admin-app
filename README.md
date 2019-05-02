@@ -14,9 +14,9 @@
 わからない人は、[このサイト](https://qiita.com/youtanagai/items/ff67ceff5497a0e0b1af)を参考にインストールしてください。   
 アプリを立ち上げるための手順は以下のとおりです。   
 　起動方法：`docker-compose up -d` ※初回はbuildが発生するので多少時間がかかります。   
-　データベースの作成（初回のみ）：`docker-compose run web rake db:create` -> `docker-compose run web rake db:migrate`   
+　データベースの作成（初回のみ）：`docker-compose exec web rake db:create` -> `docker-compose exec web rake db:migrate`   
 　管理者の作成：http://ホスト名またはIPアドレス:3000/users/sign_up にアクセスしてユーザを作成する。   
-　その後 `docker exec -it フォルダ名_web_1 bash` を実行してコンテナに入り、`rails console`を実行する。   
+　その後 `docker-compose exec web bash` を実行してコンテナに入り、`rails console`を実行する。   
 　そこで `user = User.find(1)` を実行した後に `user.update_attribute(:admin_flg, true)` を実行する。   
 　これで管理者が登録される。あとは、http://ホスト名またはIPアドレス:3000/admin にアクセスすると管理画面へ入ることができる。
 

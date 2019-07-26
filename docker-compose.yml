@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 services:
   db:
     image: mysql
@@ -17,5 +17,3 @@ services:
       - ./rails-app:/root/rails-app
     ports:
       - "3000:3000"
-    depends_on:
-      - db

@@ -1,4 +1,4 @@
-FROM ruby2.5.1
+FROM ruby:2.5.1
 
 RUN apt update -qq && apt install -y build-essential libpq-dev nodejs
 RUN mkdir /root/rails-app
